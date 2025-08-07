@@ -38,8 +38,9 @@ header .container p {
 }
 
 div .socials a {
-  color: #3882F6;
+  color:#3882F6;
   font-size: 18px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .avatar {
@@ -69,7 +70,6 @@ section {
 }
 
 h1, h2 {
-  margin-bottom: 1rem;
   font-weight: bold;
 }
 
@@ -89,27 +89,26 @@ p, ul {
   display: flex;
   margin: 0 auto;
   padding: 1em;
-  max-width: 800px;
+  max-width: 768px;
   width: 90%;
   text-align: center;
 }
 
 .about p {
   display: flex;
-  font-size: clamp(10px, 2.5vw, 24px);
+  font-size: clamp(10px, 2.6vw, 24px);
   font-weight: lighter;
   font-style: italic;
   color: #1F2937;
   background-color: #E5E7EB;
-  min-height: 200px;
-  padding: 12px;
+  height: 200px;
+  padding: 10px;
   align-items: center;
 }
 
-
-
 .projects ul {
   list-style: none;
+  padding: 14px;
 }
 
 footer {
