@@ -94,16 +94,31 @@ p, ul {
   text-align: center;
 }
 
+.about-text {
+  flex: 1 1 auto;
+  display: ;
+
+}
+
+.about-img {
+ 
+}
+
+
+.selfie {
+  max-width: 100%;
+  height: auto;
+  
+}
+
 .about p {
   display: flex;
-  font-size: clamp(10px, 2.6vw, 24px);
+  font-size: clamp(22px, 2.6vw, 24px);
   font-weight: lighter;
   font-style: italic;
   color: #1F2937;
   background-color: #E5E7EB;
-  height: 200px;
   padding: 10px;
-  align-items: center;
 }
 
 .projects ul {
