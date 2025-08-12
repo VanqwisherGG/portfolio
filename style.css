@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --base-color: #1F2937;
+  --secondary-base-color: #f4f4f4;
+  --third-base-color: white;
+  --text-color: rgb(0, 0, 0);
+  --secondary-text: #E5E7EB;
+  --third-text:#3882F6;
+  --headers-text: rgb(255, 255, 255);
+  --image-filter: ;
+}
+
+.darkmode {
+  --base-color: #00000096;
+  --secondary-base-color: #000000d2;
+  --third-base-color: rgb(27, 27, 27);
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: #E5E7EB;
+  --third-text:#7c4502e4;
+  --headers-text: rgb(255, 255, 255);
+  --image-filter: sepia(50%) hue-rotate(-8deg) saturate(90%);
+}
 
 * {
   margin: 0;
@@ -9,8 +30,8 @@
 
 body {
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--secondary-base-color);
+  color: var(--text-color);
 }
 
 .container {
@@ -22,23 +43,24 @@ body {
 }
 
 header {
-  background-color: #1F2937;
+  background-color: var(--base-color);
   padding: 3rem 1rem;
 }
 
 header h1 {
-  font-size: 48px;
-  color: #F9FAF8;
+  font-size: clamp(35px, 10vw, 48px);
+  color: var(--headers-text);
   font-weight: bold;
+  white-space: nowrap;
 }
 
 header .container p {
-  color: #E5E7EB;
+  color: var(--secondary-text);
   font-size: 18px; 
 }
 
 div .socials a {
-  color:#3882F6;
+  color:var(--third-text);
   font-size: 18px;
   text-shadow: 1px 1px 2px black;
 }
@@ -49,6 +71,7 @@ div .socials a {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  filter: var(--image-filter)
 }
 
 .socials a {
@@ -63,7 +86,7 @@ div .socials a {
 
 section {
   margin-top: 2rem;
-  background: white;
+  background: var(--third-base-color);
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -79,7 +102,7 @@ p, ul {
 
 .projects h2,
 .about h2 {
-  color: #1F2937;
+  color: var(--text-color);
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -93,6 +116,18 @@ p, ul {
   max-width: 768px;
   width: 90%;
   text-align: center;
+}
+
+.hide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+#text-hide {
+  background-color: transparent;
+  border: none;
 }
 
 @media (max-width: 820px) {
@@ -112,7 +147,6 @@ p, ul {
 
 }
 
-
 .selfie {
   max-width: 100%;
   height: auto;
@@ -123,8 +157,8 @@ p, ul {
   font-size: clamp(20px, 2.6vw, 24px);
   font-weight: lighter;
   font-style: italic;
-  color: #1F2937;
-  background-color: #E5E7EB;
+  color: var(--text-color);
+  background-color: var(--secondary-base-color);
   padding: 22px;
 }
 
@@ -138,7 +172,7 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #E5E7EB;
-  background-color: #1F2937;
+  color: var(--headers-text);
+  background-color: var(--base-color);
   font-size: 8px;
 }
