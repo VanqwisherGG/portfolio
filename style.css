@@ -59,6 +59,32 @@ header .container p {
   font-size: 18px; 
 }
 
+#mode-switch {
+  display: flex;
+  background-color: aliceblue;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-color: transparent;
+}
+
+#mode-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #mode-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #mode-switch svg:last-child {
+  display: block;
+}
+
 div .socials a {
   color:var(--third-text);
   font-size: 18px;
@@ -126,7 +152,7 @@ p, ul {
 }
 
 #text-hide {
-  background-color: transparent;
+  background-color:aliceblue ;
   border: none;
 }
 
