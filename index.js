@@ -1,3 +1,4 @@
+// start of dark mode script
 let darkmode = localStorage.getItem('darkmode')
 const themeSwitch = document.getElementById('mode-switch')
 
@@ -23,3 +24,17 @@ themeSwitch.addEventListener("click", () => {
         disableDarkmode()
     }
 })
+// end of dark mode script
+
+// about me container hider
+
+function myFunction () {
+    let aboutHider = document.querySelector('.about-container');
+    if (aboutHider.style.display === "none") {
+        aboutHider.style.display = "flex";
+    } else {
+        aboutHider.style.display = "none";
+    }
+}
+
+
