@@ -28,13 +28,21 @@ themeSwitch.addEventListener("click", () => {
 
 // about me container hider
 
-function myFunction () {
+function myFunction() {
     let aboutHider = document.querySelector('.about-container');
-    if (aboutHider.style.display === "none") {
-        aboutHider.style.display = "flex";
+    let plus = document.getElementById('icon-plus')
+    let minus = document.getElementById('icon-minus')
+    
+    aboutHider.classList.toggle("active");
+
+    if (aboutHider.classList.contains('active')) {
+        plus.style.display = "none";
+        minus.style.display = "inline";
     } else {
-        aboutHider.style.display = "none";
+        plus.style.display = "inline";
+        minus.style.display = "none";
     }
 }
 
+// about me container hider 
 

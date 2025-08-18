@@ -135,7 +135,7 @@ p, ul {
 }
 
 .about-container {
-  display: flex;
+  display: none;
   flex-direction: row;
   margin: 0 auto;
   padding: 1em;
@@ -144,11 +144,19 @@ p, ul {
   text-align: center;
 }
 
+.about-container.active {
+  display: flex;
+}
+
 .hide-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+
+.test1 {
+
 }
 
 #text-hide {
@@ -166,9 +174,7 @@ p, ul {
   display: none;
 }
 
-.#text-hide svg:first-child {
-  display: none;
-}
+
 
 @media (max-width: 820px) {
   .about-container {
