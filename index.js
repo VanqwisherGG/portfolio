@@ -26,8 +26,7 @@ themeSwitch.addEventListener("click", () => {
 })
 // end of dark mode script
 
-// about me container hider
-
+// about me container hider start
 function myFunction() {
     let aboutHider = document.querySelector('.about-container');
     let plus = document.getElementById('icon-plus')
@@ -43,6 +42,22 @@ function myFunction() {
         minus.style.display = "none";
     }
 }
+// about me container hider end
 
-// about me container hider 
+// menu hider start
+function menuHiderFunction() {
+    let containerMenu = document.querySelector('.container-menu');
+    let buttonHider = document.getElementById('button-hider');
+    let hiderMenu = document.querySelector('.menu');
 
+    containerMenu.classList.toggle('active');
+
+    if (containerMenu.classList.contains('active')) {
+        hiderMenu.style.display = "flex";
+        buttonHider.innerText = "Hide Menu";
+    } else {
+        hiderMenu.style.display = "none";
+        buttonHider.innerText = "Show Menu";
+    }
+}
+// menu hider end 
